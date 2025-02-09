@@ -1,5 +1,30 @@
-.header{
-    width: 100%;
-    background-color: black;
-    color: #fff;
+.navbar{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3 rem;
+    top: 0;
+    background-color: var(--black);
+}
+
+.logo{
+    size: 1.2rem;
+}
+
+.links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.link{
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.link:hover{
+    color: var(--white);
 }

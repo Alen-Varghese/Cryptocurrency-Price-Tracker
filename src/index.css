@@ -45,3 +45,8 @@ body {
   background: var(--blue);
   border-radius: 3rem;
 }
+
+a{
+  color: var(--white) !important;
+  text-decoration: none;
+}
