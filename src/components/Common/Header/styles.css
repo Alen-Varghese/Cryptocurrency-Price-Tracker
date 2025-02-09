@@ -12,19 +12,53 @@
     size: 1.2rem;
 }
 
-.links{
+.Links{
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 1.5rem;
 }
 
-.link{
+.Link{
     color: var(--grey);
     font-weight: 600;
     font-size: 1rem;
 }
 
-.link:hover{
+.Link:hover{
     color: var(--white);
+    transition: all 0.3s;
+}
+
+.mobile-drawer{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .navbar{
+        padding: 1.5rem;
+    }
+
+    .logo{
+        font-size: 1rem;
+    }
+    .Link{
+        font-size: 1rem;
+    }
+
+    .Links{
+        display: none;
+    }
+
+    .mobile-drawer{
+        display: block;
+    }
+
+    .drawer-div{
+        width: 40vw;
+        background-color: var(--black);
+        height: 100vh;
+        padding: 1.5rem;
+    }
 }

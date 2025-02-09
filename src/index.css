@@ -19,7 +19,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
-  height: 200vh;
   color: var(--white);
   font-family: "Inter", serif;
   /* font-family: "Merriweather", serif */
