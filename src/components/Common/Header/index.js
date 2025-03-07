@@ -2,6 +2,7 @@ import React from 'react'
 import "./styles.css";
 import TemporaryDrawer from './drawer';
 import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return <div className='navbar'>
@@ -9,22 +10,22 @@ function Header() {
       Crypton<span style={{color:"var(--blue)"}}>.</span>
     </h1>
     <div className='Links'>
-      <a href='/'>
+      <Link to='/'>
         <p className='Link'>Home</p>
-      </a>
-      <a href='/'>
+      </Link>
+      <Link to='/compare'>
         <p className='Link'>Compare</p>
-      </a>
-      <a href='/'>
+      </Link>
+      <Link to='/watchlist'>
         <p className='Link'>WatchList</p>
-      </a>
-      <a href='#'>
+      </Link>
+      <Link to='/dashboard'>
         <Button 
           text={'Dashboard'}
           outlined={true}
           onClick={()=> console.log("Btn Clicked")}
         />
-      </a>
+      </Link>
     </div>
     <div className='mobile-drawer'>
         <TemporaryDrawer/>

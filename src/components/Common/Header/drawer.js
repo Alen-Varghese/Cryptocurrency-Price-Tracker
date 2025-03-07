@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { IconButton } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export default function TemporaryDrawer() {
   const [open, SetOpen] = useState(false);
@@ -13,18 +14,18 @@ export default function TemporaryDrawer() {
         </IconButton>
         <Drawer anchor={"right"} open={open} onClose={()=> SetOpen(false)}>
             <div className='drawer-div'>
-                <a href='/'>
+                <Link to='/'>
                     <p className='Link'>Home</p>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/compare'>
                     <p className='Link'>Compare</p>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/watchlist'>
                     <p className='Link'>WatchList</p>
-                </a>
-                <a href='/'>
+                </Link>
+                <Link to='/dashboard'>
                     <p className='Link'>Dashboard</p>
-                </a>
+                </Link>
             </div>
         </Drawer>
     </div>

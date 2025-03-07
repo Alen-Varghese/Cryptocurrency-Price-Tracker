@@ -27,7 +27,7 @@ function MainComponent() {
             animate={{opacity: 1, x: 0}}
             transition={{duration: 1, delay: 1}}
             >
-                Crypton provides real-time cryptocurrency market data with easy-to-understand visuals
+                Crypton provides real-time cryptocurrency market data with easy-to-understand visuals.
             </motion.p>
             <motion.div className='btn-flex'
             initial={{opacity: 0, y: -100}}
