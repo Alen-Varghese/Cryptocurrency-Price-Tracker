@@ -43,12 +43,11 @@ function Grid({coin}) {
           >
             ${coin.current_price.toLocaleString()}
           </h3>
-          <p className='market-cap'>
+          <p className='total_volume'>
             Market Cap: ${coin.market_cap.toLocaleString()}
           </p>
           <p className='total_volume'>
-            Toatl Volume: {coin.total_volume.toLocaleString
-            ()}
+            Total Volume: {coin.total_volume.toLocaleString()}
           </p>
         </div>
     </div>
