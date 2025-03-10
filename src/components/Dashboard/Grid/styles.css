@@ -1,0 +1,115 @@
+.grid-container {
+    width: 300px;
+    background-color: var(--darkgrey);
+    border-radius: 0.75rem;
+    border: 2px solid var(--darkgrey);
+}
+
+.grid-container:hover {
+    border-color: var(--green);
+    transition: all 0.3s ease;
+}
+
+.grid-container-red:hover {
+    border-color: var(--red) !important;
+    transition: all 0.3s ease;
+}
+
+.info-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+
+.coin-logo{
+    width: 3.5rem;
+    height: 3.5rem;
+}   
+
+.name-col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.coin-name{
+    font-size: 1rem;
+    font-weight: light;
+    color: var(--grey);
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.coin-symbol{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.chip-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+
+.price-chip{
+    border: 2px solid var(--green);
+    border-radius: 2rem;
+    padding: 0.35rem 1.25rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--green);
+}
+
+.price-chip:hover,
+.icon-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.chip-red{
+    border: 2px solid var(--red) !important;
+    color: var(--red) !important;
+}
+
+.chip-red:hover{
+    background-color: var(--red) !important;
+    color: var(--white) !important;
+    transition: all 0.3s;
+}
+
+.icon-chip{
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    color: var(--green);
+}
+
+.info-container{
+    margin: 1.5rem;
+}
+
+.info-container h3{
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.total_volume{
+    color: var(--grey);
+    font-size: 1.1rem;
+    font-weight: 600;
+}

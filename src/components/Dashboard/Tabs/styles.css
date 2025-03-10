@@ -1,0 +1,8 @@
+.grid-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 1.5 rem 2rem;
+}
