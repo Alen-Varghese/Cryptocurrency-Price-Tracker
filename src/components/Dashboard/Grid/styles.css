@@ -66,6 +66,7 @@
     font-weight: 600;
     font-size: 1.1rem;
     color: var(--green);
+    min-width: 64px;
 }
 
 .price-chip:hover,
@@ -89,8 +90,8 @@
 .icon-chip{
     border: 2px solid var(--green);
     border-radius: 50%;
-    height: 2rem;
-    width: 2rem;
+    height: 2rem !important;
+    width: 2rem !important;
     display: flex;
     justify-content: center;
     align-items: center;

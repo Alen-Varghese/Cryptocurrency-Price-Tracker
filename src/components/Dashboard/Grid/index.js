@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
+import { convertNumbers } from '../../../functions/convertNumbers';
 
 function Grid({coin}) {
   return (
@@ -44,10 +45,10 @@ function Grid({coin}) {
             ${coin.current_price.toLocaleString()}
           </h3>
           <p className='total_volume'>
-            Market Cap: ${coin.market_cap.toLocaleString()}
+            Market Cap: $ {convertNumbers(coin.market_cap)}
           </p>
           <p className='total_volume'>
-            Total Volume: {coin.total_volume.toLocaleString()}
+            Total Volume: {convertNumbers(coin.total_volume)}
           </p>
         </div>
     </div>
