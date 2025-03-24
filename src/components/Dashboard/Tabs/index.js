@@ -8,6 +8,7 @@ import Grid from '../Grid';
 import './styles.css';  
 import List from '../List';
 
+
 export default function TabsComponent({coins}) {
   const [value, setValue] = useState('grid');
 
