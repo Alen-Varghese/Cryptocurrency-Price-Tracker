@@ -2,10 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root{
   --white:#fff;
   --black: #111;
@@ -58,4 +54,17 @@ img{
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.grey-wrapper{
+  display: block;
+  width: 90%;
+  background-color: var(--darkgrey);
+  margin: 1.5rem auto;
+  padding: 0rem 0.8rem;
+  border-radius: 0.8rem;
 }
