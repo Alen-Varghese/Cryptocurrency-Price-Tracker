@@ -68,3 +68,11 @@ html{
   padding: 1rem 1rem;
   border-radius: 0.8rem;
 }
+
+.coins-days-flex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1.5rem;
+  gap: 2rem;
+}
