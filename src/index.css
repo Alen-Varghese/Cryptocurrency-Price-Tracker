@@ -71,8 +71,7 @@ html{
 
 .coins-days-flex{
   display: flex;
-  align-items: center;
   justify-content: flex-start;
-  margin: 1.5rem;
+  align-items: center;
   gap: 2rem;
 }

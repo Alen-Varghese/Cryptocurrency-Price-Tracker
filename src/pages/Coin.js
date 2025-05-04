@@ -11,7 +11,7 @@ import { getCoinPrices } from '../functions/getCoinPrices';
 import LineChart from '../components/Coin/LineChart';
 import SelectDays from '../components/Coin/SelectDays';
 import { settingChartData } from '../functions/settingChartData';
-import PriceType from '../components/Coin/PriceType';
+import TogglePriceType from '../components/Coin/PriceType';
 
 function CoinPage() {
     const { id } = useParams();
@@ -51,12 +51,12 @@ function CoinPage() {
 
     const handlePriceTypeChange = async (event, newType) => {
         setIsLoading(true);
-      setPriceType(newType);
-      const prices = await getCoinPrices(id, days, newType);
-        if(prices.length > 0){
-            settingChartData(setChartData, prices);
-            setIsLoading(false);
-        }
+        setPriceType(newType);
+        const prices = await getCoinPrices(id, days, newType);
+            if(prices.length > 0){
+                settingChartData(setChartData, prices);
+                setIsLoading(false);
+            }
     };
     
     return (
@@ -71,7 +71,7 @@ function CoinPage() {
         </div>
         <div className='grey-wrapper'>
             <SelectDays days={days} handleDaysChange={handleDaysChange}/>
-            <PriceType 
+            <TogglePriceType 
                 priceType={priceType} 
                 handlePriceTypeChange={handlePriceTypeChange}
             />

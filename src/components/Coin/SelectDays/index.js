@@ -3,10 +3,11 @@ import Select from '@mui/material/Select';
 import './styles.css';
 
 export default function SelectDays({days, handleDaysChange, noPTag}) {
-  
+ 
+
   return (
     <div className='select-days'>
-      {!noPTag && <p>Price Change In</p>}
+        {!noPTag && <p>Price Change In</p>}
         <Select
         sx={{
             height: "2.5rem",
@@ -15,7 +16,7 @@ export default function SelectDays({days, handleDaysChange, noPTag}) {
                 borderColor: "var(--white)",
             },
             "& .MuiSvgIcon-root": {
-                fill: "var(--white)",
+                color: "var(--white)",
             },
             "&:hover": {
                 "&& fieldset": {
@@ -23,17 +24,18 @@ export default function SelectDays({days, handleDaysChange, noPTag}) {
                 },
             },
         }}
+          labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={days}
           label="Days"
           onChange={handleDaysChange}
         >
-          <MenuItem value={7}>7 Days</MenuItem>
-          <MenuItem value={30}>30 Days</MenuItem>
-          <MenuItem value={60}>60 Days</MenuItem>
-          <MenuItem value={90}>90 Days</MenuItem>
-          <MenuItem value={180}>180 Days</MenuItem>
-          <MenuItem value={365}>1 Year</MenuItem>
+            <MenuItem value={7}>7 Days</MenuItem>
+            <MenuItem value={30}>30 Days</MenuItem>
+            <MenuItem value={60}>60 Days</MenuItem>
+            <MenuItem value={90}>90 Days</MenuItem>
+            <MenuItem value={180}>180 Days</MenuItem>
+            <MenuItem value={365}>1 Year</MenuItem>
         </Select>
     </div>
   );

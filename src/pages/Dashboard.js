@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import Header from '../components/Common/Header';
 import TabsComponent from '../components/Dashboard/Tabs';
 import Search from '../components/Dashboard/Search';
@@ -36,12 +36,13 @@ function DashboardPage() {
 
   const getData = async () => {
     const myCoins = await get100Coins();
-    if (myCoins) {
+    if (myCoins){
       setCoins(myCoins);
       setPaginatedCoins(myCoins.slice(0,10));
       setIsLoading(false);
     }
   }
+
 
   return (
     <>
