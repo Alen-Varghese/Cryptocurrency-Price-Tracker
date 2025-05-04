@@ -22,6 +22,7 @@ function ComparePage() {
   const [days, setDays] = useState(30);
   const [priceType, setPriceType] = useState("prices");
   const [chartData, setChartData] = useState({});
+  
 
   async function handleDaysChange(event) {
     setIsLoading(true)
@@ -98,6 +99,7 @@ function ComparePage() {
             crypto1={crypto1} 
             handleCoinChange={handleCoinChange}
             crypto2={crypto2} 
+            
           />
           <SelectDays 
             days={days} 
