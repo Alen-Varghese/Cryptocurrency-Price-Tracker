@@ -13,6 +13,20 @@
   
 }
 
+[data-theme="dark"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+
+[data-theme="light"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #f3f3f3;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -64,7 +78,7 @@ html{
   display: block;
   width: 90%;
   background-color: var(--darkgrey);
-  margin: 1.5rem auto;
+  margin: 10rem auto;
   padding: 1rem 1rem;
   border-radius: 0.8rem;
 }
@@ -74,4 +88,31 @@ html{
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+}
+
+
+.cursor {
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  background-color: var(--blue);
+  z-index: 10000;
+  border: 2px solid var(--blue);
+  height: 0.3rem;
+  width: 0.3rem;
+  border-radius: 50%;
+  transition: all 200ms ease-out;
+}
+
+.cursor-pointer {
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 10000;
+  border: 2px solid var(--blue);
+  height: 2rem;
+  width: 2rem;
+  transition: all 400ms ease-out;
 }

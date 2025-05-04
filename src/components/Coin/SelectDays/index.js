@@ -4,7 +4,6 @@ import './styles.css';
 
 export default function SelectDays({days, handleDaysChange, noPTag}) {
  
-
   return (
     <div className='select-days'>
         {!noPTag && <p>Price Change In</p>}
@@ -24,8 +23,6 @@ export default function SelectDays({days, handleDaysChange, noPTag}) {
                 },
             },
         }}
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
           value={days}
           label="Days"
           onChange={handleDaysChange}

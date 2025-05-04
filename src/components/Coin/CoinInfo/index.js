@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import "./styles.css"
+
 function CoinInfo({heading, desc}) {
     const shortDesc = 
     desc.slice(0,300) + "<p style='color:var(--grey)'>  Read More..</p>";

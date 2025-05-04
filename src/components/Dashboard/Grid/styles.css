@@ -28,6 +28,23 @@
     height: 3.5rem;
 }   
 
+.watchlist-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    color: var(--green);
+    padding: 0.5rem;
+    height: 1.5rem;
+    width: 1.5rem !important;
+  }
+  
+  .watchlist-icon-red {
+    border: 2px solid var(--red);
+    color: var(--red);
+  }
+
 .name-col{
     display: flex;
     flex-direction: column;

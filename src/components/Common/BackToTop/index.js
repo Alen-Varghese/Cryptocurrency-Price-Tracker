@@ -1,4 +1,3 @@
-import React from 'react'
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import './styles.css'
 function BackToTop() {

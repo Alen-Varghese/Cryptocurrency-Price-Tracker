@@ -1,15 +1,28 @@
-import React from 'react'
 import './styles.css';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import { Tooltip } from '@mui/material';
 import { convertNumbers } from '../../../functions/convertNumbers';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import { saveItemToWatchlist } from "../../../functions/saveItemToWatchlist";
+import StarIcon from "@mui/icons-material/Star";
+import { removeItemToWatchlist } from "../../../functions/removeItemToWatchlist";
+import { useState } from 'react'
 
-function List({coin}) {
+function List({coin, delay}) {
+  const watchlist = JSON.parse(localStorage.getItem("watchlist"));
+  const [isCoinAdded, setIsCoinAdded] = useState(watchlist?.includes(coin.id));
+
   return (
     <Link to={`/coin/${coin.id}`}>
-    <tr className='list-row'>
+    <motion.tr
+        className="list-row"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: delay }}
+      >
       <Tooltip title="Coin Logo">
         <td className='td-image'>
              <img src={coin.image} className='coin-logo'/>
@@ -78,8 +91,24 @@ function List({coin}) {
             ${convertNumbers(coin.market_cap)}
           </p>
         </td>
+        <td
+          className={`watchlist-icon ${
+            coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+          }`}
+          onClick={(e) => {
+            if (isCoinAdded) {
+              // remove coin
+              removeItemToWatchlist(e, coin.id, setIsCoinAdded);
+            } else {
+              setIsCoinAdded(true);
+              saveItemToWatchlist(e, coin.id);
+            }
+          }}
+        >
+          {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
+        </td>
         </Tooltip>
-    </tr>
+        </motion.tr>
     </Link>
   );
 }

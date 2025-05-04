@@ -1,19 +1,51 @@
-import React from 'react'
 import './styles.css'
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
 import { convertNumbers } from '../../../functions/convertNumbers';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
+import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import { saveItemToWatchlist } from "../../../functions/saveItemToWatchlist";
+import StarIcon from "@mui/icons-material/Star";
+import { removeItemToWatchlist } from "../../../functions/removeItemToWatchlist";
+import { useState } from 'react'
 
-function Grid({coin}) {
+function Grid({coin, delay}) {
+
+  const watchlist = JSON.parse(localStorage.getItem("watchlist"));
+  const [isCoinAdded, setIsCoinAdded] = useState(watchlist?.includes(coin.id));
+
   return (
     <Link to={`/coin/${coin.id}`}>
+      <motion.div
+        className={`grid ${coin.price_change_percentage_24h < 0 && "grid-red"}`}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: delay }}
+      >
     <div className={`grid-container ${coin.price_change_percentage_24h < 0 && "grid-container-red"}`}>
         <div className='info-flex'>
             <img src={coin.image} className='coin-logo'/>
             <div className='name-col'>
                 <p className='coin-symbol'>{coin.symbol}</p>
                 <p className='coin-name'>{coin.name}</p>
+            </div>
+            <div
+              className={`watchlist-icon ${
+                coin.price_change_percentage_24h < 0 && "watchlist-icon-red"
+              }`}
+              onClick={(e) => {
+                if (isCoinAdded) {
+                  // remove coin
+
+                  removeItemToWatchlist(e, coin.id, setIsCoinAdded);
+                } else {
+                  setIsCoinAdded(true);
+                  saveItemToWatchlist(e, coin.id);
+                }
+              }}
+            >
+              {isCoinAdded ? <StarIcon /> : <StarOutlineIcon />}
             </div>
         </div>
         {coin.price_change_percentage_24h > 0 ? (
@@ -35,6 +67,7 @@ function Grid({coin}) {
             </div>
           </div>
         )}
+        
         <div className='info-container'>
           <h3 
           className='coin-price' 
@@ -54,6 +87,7 @@ function Grid({coin}) {
           </p>
         </div>
     </div>
+    </motion.div>
     </Link>
   );
 }

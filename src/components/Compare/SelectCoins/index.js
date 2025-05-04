@@ -3,10 +3,9 @@ import { get100Coins } from "../../../functions/get100Coins";
 import { MenuItem, Select } from "@mui/material";
 import "./styles.css"
 
-function SelectCoins({crypto1, crypto2, handleCoinChange}) {
+function SelectCoins({crypto1, handleCoinChange, crypto2}) {
 
     const [allCoins, setAllCoins] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
 
     const styles = {
         height: "2.5rem",
