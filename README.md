@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 💹 Crypt-On – Cryptocurrency Price Tracker Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Crypt-On is a feature-rich, responsive cryptocurrency analytics platform built using React.js. It allows users to track prices, compare coins, analyze market trends, and manage a personal watchlist—all with a polished UI and smooth animations.
 
-## Available Scripts
+ - 🔗 Live Demo: https://crypt-on.netlify.app/
+ - 🛠 Built with: React.js, Material UI, Chart.js, Axios, Framer Motion
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏠 Landing Page
+- Responsive Header with MUI Drawer
+- Text-stroke hover animations for headings
+- Framer Motion animations for content and images
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📊 Dashboard Page
+- Custom-themed MUI Tabs for navigation
+- Real-time market data from CoinGecko API using Axios
+- Search functionality via .filter()
+- Animated rendering of Grid and List views
+- Pagination using MUI + slice()
 
-### `npm test`
+### 💰 Coin Details Page
+- Dynamic routing via coin ID from URL
+- Charts built using react-chartjs-2
+- Interactive time-range selection via MUI Select
+- Toggle between Price, Market Cap, and Volume data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⚖️ Compare Page
+- Compare two coins on dual Y-axes
+- Coin selection with dynamic dropdowns
+- Responsive charts for visual side-by-side comparison
 
-### `npm run build`
+### ⭐ Watchlist Page
+- Add/Remove coins to localStorage-based watchlist
+- Persisted with useEffect for seamless UX
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔨 Additional Features
+- Share page using RWebShare API
+- Custom animated mouse cursor
+- Toast notifications via react-toastify for user feedback
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Folder Structure 
 
-### `npm run eject`
+ - src/
+ - ├── components/
+ - │ ├── Common/ # Header, Footer, Loader
+ - │ ├── Coin/ # Coin Details, Chart, Info
+ - │ ├── Compare/ # SelectCoins, ComparisonGraph
+ - │ └── Dashboard/ # Tabs, Cards (Grid/List)
+ - ├── functions/ # API and utility functions
+ - ├── pages/ # Route components (Home, Coin, Compare, Watchlist)
+ - ├── styles/ # Global and component CSS
+ - └── App.js / index.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React.js (with Hooks)
+- Material UI (MUI)
+- Axios
+- Chart.js (via react-chartjs-2)
+- CoinGecko API
+- Framer Motion
+- React Toastify
+- Netlify Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Getting Started
 
-## Learn More
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Alen-Varghese/Cryptocurrency-Price-Tracker.git
+   cd Cryptocurrency-Price-Tracker
+   
+2. Install dependencies:
+  ```bash
+   npm install
+  ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  ```bash
+  npm start
+  ```
